@@ -1,15 +1,10 @@
-import java.util.Arrays;
-import java.util.List;
-
 public class Dayoff {
     public static void main(String[] args) {
-
-        String result=checkWeekend("Sunday");
-        System.out.println(result);
-
+        System.out.println(checkWeekend("Monday"));
+        System.out.println(checkWeekend("Sunday"));
     }
+
     public static String checkWeekend(String weekday) {
-            List<String> weekends = Arrays.asList("Monday", "Sunday");
-            return (weekends.contains(weekday)) ? "Ура, выходной!" : "Надо еще поработать!";
-        }
+        return (weekday.equals("Saturday") || weekday.equals("Sunday")) ? "Ура, выходной!" : "Надо еще поработать";
     }
+}
